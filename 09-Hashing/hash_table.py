@@ -129,7 +129,15 @@ class HashTable:
         
         Time Complexity: O(1) average, O(n) worst case
         """
-        return self.get(key) is not None
+        index = self._hash(key)
+        node = self.buckets[index]
+        
+        while node:
+            if node.key == key:
+                return True
+            node = node.next
+        
+        return False
     
     def keys(self):
         """
@@ -244,18 +252,19 @@ def find_duplicates(arr):
     
     Returns:
         List of duplicate elements
+    
+    Time Complexity: O(n)
     """
     seen = HashTable()
-    duplicates = []
+    duplicates_set = set()  # Use set for O(1) lookup
     
     for item in arr:
         if seen.contains(item):
-            if item not in duplicates:
-                duplicates.append(item)
+            duplicates_set.add(item)
         else:
             seen.put(item, True)
     
-    return duplicates
+    return list(duplicates_set)
 
 
 def two_sum(arr, target):

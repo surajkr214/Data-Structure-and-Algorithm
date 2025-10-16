@@ -38,7 +38,7 @@
 | **Linear Search** | O(n) | O(1) | None |
 | **Binary Search** | O(log n) | O(1) | Sorted array |
 | **Jump Search** | O(√n) | O(1) | Sorted array |
-| **Interpolation Search** | O(log log n) | O(1) | Sorted, uniform distribution |
+| **Interpolation Search** | O(log log n) avg, O(n) worst | O(1) | Sorted, uniform distribution |
 | **Exponential Search** | O(log n) | O(1) | Sorted array |
 
 ## 📊 When to Use What?

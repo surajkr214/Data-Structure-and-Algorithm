@@ -197,8 +197,11 @@ class Graph:
                 if neighbor not in visited:
                     if dfs_cycle(neighbor, vertex):
                         return True
-                elif neighbor != parent or self.directed:
-                    return True
+                else:
+                    # For directed graphs, any visited neighbor is a back edge (cycle)
+                    # For undirected graphs, only if neighbor is not parent
+                    if self.directed or neighbor != parent:
+                        return True
             
             return False
         
