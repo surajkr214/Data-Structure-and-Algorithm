@@ -59,10 +59,19 @@ Implementation and comparison of searching algorithms:
 - [View Examples →](07-Searching/)
 
 ### 8. Graphs (`08-Graphs/`)
-Coming soon...
+- Graph representation (Adjacency List)
+- BFS and DFS traversals
+- Shortest path algorithms
+- Cycle detection
+- **Time Complexity**: O(V + E) for traversals
+- [View Examples →](08-Graphs/)
 
 ### 9. Hashing (`09-Hashing/`)
-Coming soon...
+- Hash table implementation with chaining
+- Collision resolution techniques
+- Common applications: frequency counter, duplicates, two sum
+- **Time Complexity**: O(1) average for operations
+- [View Examples →](09-Hashing/)
 
 ## 🚀 Getting Started
 
